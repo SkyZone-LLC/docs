@@ -43,12 +43,12 @@
         4. Click "Create New App"
         - Give the app a name and click "Create App". This name is the default url to this app when you're done (ex: myappname.herokuapp.com)
 
-    b. Through heroku.com dashboard:
+    b. Through terminal (cmd):
         heroku create myappname
 
 5. Create Procfile in your root 
 
-    `touch Procfile`
+    touch Procfile
 
     Inside Procfile add the following:
     web: npm start
@@ -56,29 +56,31 @@
 
 6. Push to heroku
 
-    `$ git add --all `
+    git add --all 
 
-    `$ git commit -m “first commit"`
+    git commit -m “first commit"
 
-    `$ git push heroku main `
+    git push heroku main 
     
 
 7. Spin up a Server. Assign a free server to run the website:
 
-    `$ heroku ps:scale web=1`
+    heroku ps:scale web=1
 
 8. Set up your Production Database. Create a database to host your production data:
 
-    `$ heroku addons:create mongolab:sandbox`
+    heroku addons:create mongolab:sandbox
 
 8. If you have .env variables. Push them to heroku as well:
 
-    Ex: `$ heroku config:set DATABASE_URI=database_uri_here`
+    Ex: 
+
+    heroku config:set DATABASE_URI=database_uri_here
 
 9. Open your app. 
     You can open it from dashboard or simply run:
 
-    `$ heroku open `
+    heroku open 
 
 
 
