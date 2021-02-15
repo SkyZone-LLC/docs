@@ -5,6 +5,6 @@
 
 --- 
 
-* [Home](/)
-* [Instructions](/instructions/README.md)
+<!-- * [Home](/)
+* [Instructions](/instructions/README.md) -->
 
