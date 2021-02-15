@@ -12,16 +12,25 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: '',
+      name: 'skyzone docs',
+      repo: 'https://github.com/SkyZone-LLC/docs',
       loadSidebar: true,
       subMaxLevel: 2,
       alias: {
       '/.*/_sidebar.md': '/_sidebar.md'
+    },
+    logo: '/_media/head-light.png',
+    themeColor: '#125487',
+    notFoundPage: true,
+    search: {
+      placeholder: 'Search in docs',
+      noData: 'No Results!',
     }
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- search plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
