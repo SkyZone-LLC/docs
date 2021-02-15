@@ -5,6 +5,5 @@
 
 --- 
 
-<!-- * [Home](/)
-* [Instructions](/instructions/README.md) -->
+Found a ```bug/error/typo``` reach out in slack
 
