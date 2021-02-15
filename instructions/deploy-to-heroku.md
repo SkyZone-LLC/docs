@@ -56,11 +56,11 @@
 
 6. Push to heroku
 
-    `git add --all 
+    `git add --all` 
 
-    git commit -m “first commit"
+    `git commit -m “first commit"`
 
-    git push heroku main`
+    `git push heroku main`
     
 
 7. Spin up a Server. Assign a free server to run the website:
