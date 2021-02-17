@@ -32,3 +32,104 @@ git pull partnerA main
 - Once PartnerB completes the pull, they will have all of PartnerB's work, and you will both be ready to continue with roles reversed. When the time comes to switch again, you simply perform the same process (with roles reversed).
 
 
+
+---
+
+# END 
+
+---
+
+
+## Some Scenaiors And Soluions (Optional Reading)
+
+
+####  How to Work Together ? 
+
+ … Without killing each other
+
+![fighting](../_media/fight.png)
+
+
+#### Why is it hard to work in a pair?
+
+
+In SkyZone, we will be doing mostly pair programming exercises
+Necessary skill for the Interview Setting
+Even some companies deploy the pair programming technique 
+Learning to work together in pairs starts to flex the working together muscle for end of bootcamp -- and beyond!
+
+####  Now, let’s discuss & roleplay 4 common Scenarios
+
+
+1. **Wires Crossed**
+
+> During a pair programming session, two pair partners are having trouble communicating ideas effectively. One person seems to have a good grasp of the goal and how to get there but cannot effectively communicate it — their ideas are coming out jumbled. The other person is trying really hard to understand. The dynamic alternates between silence and frustration.
+
+- How would you respond when this happens?
+- How would you respond if this happened multiple times?
+
+> Communication goes two-ways: everybody here has the technical ability
+If you can't communicate something well, it may be because you yourself don't understand something about it
+Be aware of your natural biases—it can be easy to blame miscommunication on language barrier or accent, when really that's a red herring, we're all learning to improve our technical vocab
+Takeaway: be upfront with your partner if you don't understand them, so that you can try to address it
+"show instead of tell"
+diagrams, writing it out, coding it out
+using similar examples, pointing them out in docs / wherever
+Go to another team member or “supervisor” for help
+
+
+2. **Cutting Corners** 
+
+> My partner isn’t willing to embrace the “productive struggle” with me. They will open up the hints before we even spend time talking through the problem, or even submit a help-ticket too quickly. I’ll make suggestions, but they seem to go unheard. Once, they even proposed the same idea as if they just thought of it themselves! 
+
+- How can I assert my preference to work through the material together?
+- How can I ensure my ideas are heard? 
+
+
+> The bootcamp is stressful sometimes, it’s just easier mentally to look at hints or just give up and ask for help quickly
+This could very well mean that your partner is tired or going through something
+Be empathetic but also try to communicate firmly and politely of the dynamic that is desired
+Takeaways
+Ask them if they are feeling okay and if they want to take a break
+Be upfront to your partner about the dynamic you want
+Go to another team member or “supervisor” for help
+
+
+3. **Speedy Driver**
+
+> My partner is Driving the code way too quickly! I’ve been feeling a little overwhelmed by today’s content, and they’re just writing their own code. It seems to be working, but I don't always understand why and I feel embarrassed having to ask for explanations. I'm sure we will complete the workshop, but I'm worried I won’t retain much understanding of the concepts at hand. 
+
+- How can I keep my Driver out of the speed lane?
+- Where do you think the Speedy Driver’s mindset is coming from, and what habits can they establish for themselves so they remember to slow down? 
+
+
+> Communicate with your partner about how you feel.
+The Speedy Driver could just be very enthusiastic
+The Speedy Driver also could be feeling anxious about finishing the workshop. Many students feel uncomfortable not finishing a workshop. It’s normal to feel like we want to finish things fully but the goal is not to finish but to work together and retain information and build programming mental models. 
+Takeaways
+Ask them politely to slow down
+Teaching the concept to someone else will help solidify their understanding
+Focus on the goals
+After a few lines of code, slow down and have a discussion to walkthrough what is going on
+Go to another team member or “supervisor” for help
+
+
+4. **Lala Land**
+
+> My partner has been in the navigator role for a while and keeps checking their phone. I don’t mind it happening once - maybe twice-, but it’s started to feel like they’re looking at their phone more than they’re engaged in our workshop. At this point I’m feeling pretty annoyed and frustrated with their lack of focus and contribution. 
+
+- How can you re-engage your partner and get them back on track? 
+- What would you do if it happens again?
+
+
+> We don’t know what’s going on with our pair programming partner. They could be going through some personal issues.
+They could be tired or hungry which can decrease engagement
+Sometimes talking about code the entire time is exhausting
+Takeaways
+Ask them if they are doing okay
+Ask them if they want to take a 5-10 minute break
+Have a conversation about something completely different for a bit
+Go to another team member or “supervisor” for help
+
+
+
