@@ -35,7 +35,7 @@ git pull partnerA main
 
 ---
 
-# END 
+# EXTRA 
 
 ---
 
@@ -132,4 +132,24 @@ Have a conversation about something completely different for a bit
 Go to another team member or “supervisor” for help
 
 
+## Does git as a group confuse you?
+
+No worries, we are here to settle this confusion once and for all.
+
+Let's consider this, Paul, Sergio, and Dave are all working on a project together.
+We each have our own branches (for this example they are just our names).
+
+Dave has finished a feature and puts up a pull request.  Sergio reviews it--everything is great!--and he approves it.
+
+So now the master is updated with new stuff that both Sergio and Paul do not have.  They are going to want to do the following steps:
+
+1. Add, commit, and push all their current changes to their branch! (You don't want to lose any of your work--so make sure github has been updated)
+2. Switch to the master branch (in terminal type `git checkout master`)
+3. Do a `git pull`.  (The pull request is approved so all members of group need to do git pull)
+4. Switch back to your branch. (in terminal type `git checkout <branchname>`)
+5. Merge master into your branch (type `git merge master`)
+6. Add, commit, and push the merged madness to github.
+7. At any point their may be merge conflicts--if these happen (and they will) make sure you go through each conflict, 1 at a time, with whoever did the latest pull request.  Either accept incoming change, keep your code, or combine both on each of the conflicting files.
+
+Follow these steps and your conflicts should be minimized and your
 
