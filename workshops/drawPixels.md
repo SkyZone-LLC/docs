@@ -9,11 +9,11 @@ Today, we'll be building a small editor for making 8-bit art! You'll be able to 
 
 **STARTING POINT**
 
-![start](../_media/workshops/drawPixels/drawPixels-start.png)
+![start](../_media/workshops/drawPixels/drawpixels-start.png)
 
 **WORKSHOP GOAL**
 
-![goal](../_media/workshops/drawPixels/drawPixels-result.png)
+![goal](../_media/workshops/drawPixels/drawpixels-result.png)
 
 
 ### Setup
