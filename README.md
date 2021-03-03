@@ -1,9 +1,9 @@
 # SkyZone Academy Documentation
 
-> Browse left sidebar for to find out more! 
+> Browse from left sidebar 
 
 
 --- 
 
-Found a ```bug/error/typo``` reach out in slack
+Found a ```bug/error/typo```?  Reach out us in slack
 

@@ -1,8 +1,9 @@
 
-* [Home](/)
-* [pairing-with-git](/instructions/pairing-with-git.md)
-* [deploy-to-heroku](/instructions/deploy-to-heroku.md)
+* [HOME](/)
+* [Instructions](/instructions/)
 * [Cheatsheets](/cheatsheets/html-css.md)
+* [Workshops](/workshops/)
+
 
 
 
