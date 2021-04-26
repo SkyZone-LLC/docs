@@ -1,9 +1,5 @@
-
-* [HOME](/)
-* [Instructions](/instructions/)
-* [Cheatsheets](/cheatsheets/html-css.md)
-* [Workshops](/workshops/)
-
-
-
-
+- [HOME](/)
+- [Instructions](/instructions/)
+- [Cheatsheets](/cheatsheets/html-css.md)
+- [Workshops](/workshops/)
+- [JS Fundamentals](/javascript/)
