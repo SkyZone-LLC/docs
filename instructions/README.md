@@ -1,5 +1,5 @@
-# INSTRUCTIONS
+# Useful Instructions:
 
-* [pairing-with-git](instructions/pairing-with-git.md)
+1. [pairing-with-git](instructions/pairing-with-git.md)
 
-* [deploy-to-heroku](instructions/deploy-to-heroku.md)
+2. [deploy-to-heroku](instructions/deploy-to-heroku.md)

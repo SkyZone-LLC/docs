@@ -1,7 +1,8 @@
 # Landing Page Image Slider
+
 > DOM Events, Arrays, Loops, Styling
 
-## 1. Introduction 
+## 1. Introduction
 
 ### Goal
 
@@ -11,11 +12,9 @@ When `right/left` clicked your **background image** and **name of a car** should
 
 Addintioanlly we added `start/stop` buttons to trigger slider automatically.
 
-
 **WORKSHOP GOAL**
 
-![goal](../_media/workshops/image-slider/image-slider-result.gif)
-
+![goal](../../_media/workshops/image-slider/image-slider-result.gif)
 
 ### Setup
 
@@ -36,6 +35,7 @@ Both partners should fork this [repo](https://github.com/urakymzhan/image-slider
 **When it's time to switch roles**
 
 PartnerA should commit all of their work and push it to their main branch:
+
 ```
 git add -A
 git commit -m "Easy to understand commit message"
@@ -43,23 +43,20 @@ git push origin main
 ```
 
 PartnerB should then pull from their partner's remote (NOT from their own origin):
+
 ```
 git pull partnerA main
 ```
 
 Once PartnerB completes the pull, they will have all of PartnerA's work, and you will both be ready to continue with roles reversed. When the time comes to switch again, you simply perform the same process (with roles reversed).
 
-
-
-
 ## 2. Getting Started
 
-
 ### Observation
-Open up the `index.html` file. For your convenience we provided all the html, css code ready for you. 
+
+Open up the `index.html` file. For your convenience we provided all the html, css code ready for you.
 
 `div` with class `img-container` will update its background value.
-
 
 ### Remove boilerplate
 
@@ -68,9 +65,22 @@ Everything you see about `start/stop` buttons can be done at the end. First impl
 One the ways of tackling this challenge is to store image names and car names inside an array:
 
 **Hint:**
+
 ```javascript
-  const pictures = [ "contBcg-0", "contBcg-1", "contBcg-2", "contBcg-3", "contBcg-4"];
-  const carNames = [ "Mercedes AMG", "Mercedes E Class", "BMW", "AUDI", "Dodge Challenger"];
+const pictures = [
+  'contBcg-0',
+  'contBcg-1',
+  'contBcg-2',
+  'contBcg-3',
+  'contBcg-4',
+];
+const carNames = [
+  'Mercedes AMG',
+  'Mercedes E Class',
+  'BMW',
+  'AUDI',
+  'Dodge Challenger',
+];
 ```
 
 ### Get Hands Dirty
@@ -81,14 +91,10 @@ Don't forget to handle `limits` when changing background or names. So that you d
 
 **Hint:** `counter and pictures.length corellation`
 
-
 ### Automate it
 
 After you implenented manual sliders, you can move on to work on `start/stop` buttons similarly.
 
-**Hint:** You might want to use `setInterval`. Read more [here](https://www.w3schools.com/jsref/met_win_setinterval.asp) 
-
-
+**Hint:** You might want to use `setInterval`. Read more [here](https://www.w3schools.com/jsref/met_win_setinterval.asp)
 
 > Want to give feedback? Did more than asked? Please slack your instructor.
-

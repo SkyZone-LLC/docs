@@ -1,7 +1,8 @@
-# DrawPixels 
-> DOM Manipulation and Event Delegation 
+# DrawPixels
 
-## 1. Introduction 
+> DOM Manipulation and Event Delegation
+
+## 1. Introduction
 
 ### Goal
 
@@ -9,12 +10,11 @@ Today, we'll be building a small editor for making 8-bit art! You'll be able to 
 
 **STARTING POINT**
 
-![start](../_media/workshops/drawPixels/drawpixels-start.png)
+![start](../../_media/workshops/drawPixels/drawpixels-start.png)
 
 **WORKSHOP GOAL**
 
-![goal](../_media/workshops/drawPixels/drawpixels-result.png)
-
+![goal](../../_media/workshops/drawPixels/drawpixels-result.png)
 
 ### Setup
 
@@ -35,6 +35,7 @@ Both partners should fork this [repo](https://github.com/urakymzhan/drawPixels) 
 **When it's time to switch roles**
 
 PartnerA should commit all of their work and push it to their main branch:
+
 ```
 git add -A
 git commit -m "Easy to understand commit message"
@@ -42,6 +43,7 @@ git push origin main
 ```
 
 PartnerB should then pull from their partner's remote (NOT from their own origin):
+
 ```
 git pull partnerA main
 ```
@@ -52,13 +54,10 @@ Once PartnerB completes the pull, they will have all of PartnerA's work, and you
 
 Take a moment to examine the starting point with your partner. The most important file to check out is `index.html` - it contains HTML that our browser will use to construct the DOM, as well as link and script tags that cause the browser to request additional resources
 
-
-
-
 ## 2. Creating Rows
 
-
 ### Styling Table Cells
+
 Our first task will be to get our grid of cells to appear.
 
 An HTML table has three basic ingredients - the `<table>` tag, which contains a series of table rows `(<tr>)` as children, which in turn contain a series of table data cells `(<td>)`. (There are other some others, but we won't worry too much about them today).
@@ -66,16 +65,16 @@ An HTML table has three basic ingredients - the `<table>` tag, which contains a 
 In index.html, add the following HTML between the opening and closing `<table>` tags
 
 ```html
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
 ```
 
 If you refresh the page, you won't actually see any difference - this is because our `td` cells don't have any style! If you refer back to our goal, you'll see that what we want is for each `td` to have a **light gray background** color with dimensions of about **50x50** pixels.
@@ -83,11 +82,10 @@ If you refresh the page, you won't actually see any difference - this is because
 Add a CSS rule to style.css that will make each td look the way we want
 You'll know you've succeeded if you see something like this:
 
-
-![pixels styled](../_media/workshops/drawPixels/style-pixels.png)
-
+![pixels styled](../../_media/workshops/drawPixels/style-pixels.png)
 
 ### Creating Elements
+
 Creating a new DOM element with JavaScript is a two step process:
 
 1. First, you must create the new element using `document.createElement`
@@ -96,9 +94,9 @@ Creating a new DOM element with JavaScript is a two step process:
 For example, to add a new `li` to a `ul`, we might do something like this:
 
 ```javascript
-const ul = document.getElementById('the-ul')
-const newLi = document.createElement('li')
-ul.appendChild(newLi)
+const ul = document.getElementById('the-ul');
+const newLi = document.createElement('li');
+ul.appendChild(newLi);
 ```
 
 Rather than hard-code a certain number of table rows in our HTML, let's create them dynamically using JavaScript!
@@ -116,8 +114,8 @@ Your makeRow function should create a new `tr` element. It should create and app
 Invoke the makeRow function several times
 Check it out by refreshing the page - you should see a new row of cells for each time you invoked makeRow!
 
-
 ### Making Rows
+
 Now that we have a convenient function for creating rows, let's make it so that users can add rows themselves when they click that "Add Row" button!
 
 In `script.js`:
@@ -126,7 +124,6 @@ In `script.js`:
 - Attach an event listener to the "add row" button - whenever the "add row" button is clicked, we want to fire the `makeRow` function
 
 Refresh the page to try it out - you should be able to add as many rows as your heart desires!
-
 
 ## 3. Adding Color
 
@@ -148,23 +145,22 @@ For example, a CSS class to give an element a red background color might be:
 
 Add several CSS classes like the one above to your `style.css`. Feel free to choose your favorite colors!
 
-
-
 ### Event Delegation
+
 We want to execute a JavaScript function every time a `<td>` cell is clicked. Does this mean we need to go through and add an event listener to **every** `<td>` element?
 
 **No!** We can use event delegation. We'll attach the event listener to a parent element. When the child element is clicked, the event will "bubble up" to the parent and execute the parent's event handler.
 
 - Determine which element to attach the event listener to. This should be the common ancestor of every `<td>` element
 
-**Hint:** The  `table` element makes the most sense! If we went with `tr`, we would need to attach it to every tr.
+**Hint:** The `table` element makes the most sense! If we went with `tr`, we would need to attach it to every tr.
 
 Write a function called `colorize` and attach it as the click handler for the parent element. For now, simply log out the string `"clicked!"` - we'll deal with adding color in the next step
 
 Try it out by refreshing and opening your browser's dev tools. Add some cells and click them - you should see "clicked!" logged to the console!
 
-
 ### Event Target
+
 Now that we can fire a click handler, it's time to change the color of our td cells!
 
 Because we're representing our colors as CSS classes, we can change the appearance of the DOM by mutating the `className` property on the selected DOM node.
@@ -184,10 +180,10 @@ In our event handler (that is, the colorize function),
 
 Try it out - if clicking a cell causes that cell's color to change, you'll know that you've achieved your goal!
 
-
 ## 4. Switching Colors
 
 ### Change Event
+
 Last but not least, let's make it so that we can pick from a variety of colors! To do this, we'll take advantage of that `<select>` element and the `"change"` event it fires whenever we select something.
 
 In `index.html`, add an `<option>` tag for each CSS color class from your `style.css`
@@ -206,8 +202,8 @@ Don't forget to include the `value` property! You want the value to match the na
 
 Try it out by refreshing the page and opening your browser's dev tools. Every time you pick something from the `select field`, you should see that option's value logged to the console.
 
-
 ### Choosing a Color
+
 Now that we can choose a color, our JavaScript app needs some notion of a "chosen color". We want to put aside whatever color has been chosen by the user, and then change the cells that we click to be that color.
 
 Try to figure it out! The first hint below will suggest an approach if you get stuck.
@@ -216,19 +212,18 @@ Try to figure it out! The first hint below will suggest an approach if you get s
 
 You'll know you've succeeded when you can successfully change colors. You may find a quirk occurs when trying to "paint over" an existing color - we'll address this in the next section!
 
-
-
 ## 5. Extra Credit
 
 ### Finishing Touches
+
 There's a finicky little issue that could happen if someone clicks the space between the table cells - we might end up coloring the tr or table in the background! We should be a bit more deliberate and make sure that we only change the background color of the target element if that target element is a 'td' element.
 
 How can we tell what kind of element the event target is?
 
-**Hint: Solution**  Try checking out `event.target.tagName`
-
+**Hint: Solution** Try checking out `event.target.tagName`
 
 ### Dragging to Paint
+
 It can be tiresome to have to click each cell individually. Try to make it so that dragging the mouse over cells will "paint" them the specified color! You'll take advantage of `"mouseup"`, `"mousedown"` events that you used to drag and drop cats, as well as the `"mouseover"` event (instead of the slightly different `"mousemove"` event from before)!
 
 ### Additional Paint Tools

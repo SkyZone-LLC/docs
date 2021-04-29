@@ -1,11 +1,10 @@
 > CSS Cheatsheet credit: hostinger.com
 
-## HTML Cheatsheet
-
+### HTML Cheatsheet
 
 ![html css cheetsheet](../_media/html5-cheatsheet.jpg)
 
-## CSS Cheatsheet
+### CSS Cheatsheet
 
 ![html css cheetsheet](../_media/CSS3-Cheatsheet-03.jpg)
 ![html css cheetsheet](../_media/CSS3-Cheatsheet-04.jpg)
@@ -18,4 +17,3 @@
 ![html css cheetsheet](../_media/CSS3-Cheatsheet-11.jpg)
 ![html css cheetsheet](../_media/CSS3-Cheatsheet-12.jpg)
 ![html css cheetsheet](../_media/CSS3-Cheatsheet-13.jpg)
-

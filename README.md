@@ -1,12 +1,6 @@
-# SkyZone Academy DOCS
+# SkyZone Academy Docs
 
-> Browse from left sidebar 
+> Found `bug/error/typo`?
+> Reach out us in slack
 
-
---- 
-
-Found a ```bug/error/typo```?  Reach out us in slack
-
---- 
-
-**© SkyZone Academy**
+---
