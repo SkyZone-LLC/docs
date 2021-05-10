@@ -5,7 +5,8 @@
 
 # JS OOP
 3. [Prototypes in javascript](javascript/prototype.md)
+4. [Composition](javascript/composition.md)
 
 # JS Modules and Tooling
-4. [Eslint](javascript/eslint.md)
+5. [Eslint](javascript/eslint.md)
 

@@ -19,3 +19,4 @@
   - [lexical-context](/javascript/lexical-context.md)
   - [prototypes in javascript](javascript/prototype.md)
   - [eslint](javascript/eslint.md)
+  - [composition](javascript/composition.md)
