@@ -14,6 +14,8 @@
     - [wealthy-people](/workshops/DOM/wealthy-people.md) -->
   - [VanillaJS](/workshops/vanillajs/README.md)
     - [pokemon](/workshops/vanillajs/pokemon.md)
-- [JS Fundamentals](/javascript/README.md)
+- [JavaScript Topics](/javascript/README.md)
   - [this](/javascript/this.md)
   - [lexical-context](/javascript/lexical-context.md)
+  - [prototypes in javascript](javascript/prototype.md)
+  - [eslint](javascript/eslint.md)
