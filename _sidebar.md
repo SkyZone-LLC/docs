@@ -7,11 +7,11 @@
 - [Workshops](/workshops/README.md)
   - [DOM](/workshops/DOM/README.md)
     - [bmi](/workshops/DOM/bmi.md)
-    <!-- - [drawPixels](/workshops/DOM/drawPixels.md) -->
+    - [drawPixels](/workshops/DOM/drawPixels.md)
     - [hit-a-mole](/workshops/DOM/hit-a-mole.md)
     - [image-slider](/workshops/DOM/image-slider.md)
-<!--     - [lyricoMania](/workshops/DOM/lyricoMania.md)
-    - [wealthy-people](/workshops/DOM/wealthy-people.md) -->
+    - [lyricoMania](/workshops/DOM/lyricoMania.md)
+    - [wealthy-people](/workshops/DOM/wealthy-people.md)
   - [VanillaJS](/workshops/vanillajs/README.md)
     - [pokemon](/workshops/vanillajs/pokemon.md)
 - [JavaScript Topics](/javascript/README.md)
