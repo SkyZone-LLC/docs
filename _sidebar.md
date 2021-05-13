@@ -20,3 +20,4 @@
   - [prototypes in javascript](javascript/prototype.md)
   - [eslint](javascript/eslint.md)
   - [composition](javascript/composition.md)
+  - [JS Modules](javascript/modules.md)
