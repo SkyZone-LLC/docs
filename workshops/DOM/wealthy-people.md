@@ -6,11 +6,11 @@
 
 ### Goal
 
-Goal is to learn how to work with external API's and perform fetching.
+Goal is to learn how to work with **external API's** and perform **fetching**.
 
 Fetch random users from the [randomuser.me](https://randomuser.me) API.
 
-Read their documentation first.
+Read their documentation first. After that log details of user and explore what this **api** is returning. (data should be inside `results[0]`)
 
 **STARTING POINT**
 
@@ -40,7 +40,7 @@ Both partners should fork this [repo](https://github.com/urakymzhan/wealthy-peop
 
 PartnerA should commit all of their work and push it to their main branch:
 
-```
+```bash
 git add -A
 git commit -m "Easy to understand commit message"
 git push origin main
@@ -48,7 +48,7 @@ git push origin main
 
 PartnerB should then pull from their partner's remote (NOT from their own origin):
 
-```
+```bash
 git pull partnerA main
 ```
 
@@ -62,9 +62,9 @@ Open up the `index.html` file. For your convenience we provided all the html, cs
 
 ### Tips
 
-See how 3 random users popped up on inital page load. That is creating elements `createElement` after fetching some users from API and sticking it to the DOM.
+See how 3 random users popped up on inital page load. That is creating elements `createElement` after fetching some users from API and sticking it to the DOM. (meaning inside **main** element)
 
-Subsequent users will be just added to them.
+Subsequent users will be just appended here.
 
 You can use async/await or promise chain for fetching data
 
@@ -72,17 +72,30 @@ Ex:
 
 ```javascript
 async function getRandomUser() {
-  let response = await fetch('urllinkhere');
+  let response = await fetch("paste url link here");
   // your code
 }
 ```
 
+or
+
 ```javascript
 function getRandomUser() {
-  fetch('urllinkhere')
+  fetch("paste url link here")
     .then((response) => response.json())
     .then((users) => console.log(users));
 }
+```
+
+One thing to notice: **API** doesnt return users money. So, it's your reponsibility to supply money to each user.
+
+Ex:
+
+```javascript
+const newUser = {
+  name: `${user.name.first} ${user.name.last}`,
+  money: Math.floor(Math.random() * 1000000),
+};
 ```
 
 ### More Tips
@@ -95,8 +108,26 @@ function getRandomUser() {
 
 ### Even More Tips
 
-You might want to create functions for every event that is happening (Ex: Add User button => getRandomUser(), Double Money button => doubleMoney() and so on.)
+You might want to create `functions` for every **event** that is happening (Ex: **Add User** `button => getRandomUser()`, **Double Money** `button => doubleMoney()` and so on.)
+
+```javascript
+const doubleMoney = () => {
+  // code
+  // update DOM
+};
+
+const sortByRichest = () => {
+  // code
+  // update DOM
+};
+```
 
 Lastly don't forget to update the DOM after each update.(you can think of it as function call)
+
+```javascript
+const updateDOM = () => {
+  // code
+};
+```
 
 > Want to give feedback? Did more than asked? Please slack your instructor.

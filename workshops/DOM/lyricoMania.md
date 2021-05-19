@@ -8,7 +8,7 @@
 
 Find songs, artists and lyrics using the [lyrics.ovh](https://lyrics.ovh) API
 
-Read their documentation first.
+Read their **documentation** first.
 
 **STARTING POINT**
 
@@ -58,11 +58,12 @@ Once PartnerB completes the pull, they will have all of PartnerA's work, and you
 
 Open up the `index.html` file. For your convenience we provided all the html, css code ready for you.
 
-### Tips
+### Start Coding
 
-See how 3 random users popped up on inital page load. That is creating elements `createElement` after fetching some users from API and sticking it to the DOM.
+In total you can get away using 2 urls from API:
 
-Subsequent users will be just added to them.
+- To search by term: `https://api.lyrics.ovh/suggest/{whatever-user-types-on-input}`
+- To get the lyrics of particular song: `https://api.lyrics.ovh/v1/${artist}/${songTitle}`
 
 You can use async/await or promise chain for fetching data
 
@@ -70,28 +71,44 @@ Ex:
 
 ```javascript
 async function searchSongs() {
-  let response = await fetch('urllinkhere');
+  let response = await fetch("paste url link here");
   // your code
 }
 ```
 
 ```javascript
 function searchSongs() {
-  fetch('urllinkhere')
+  fetch("paste url link here")
     .then((response) => response.json())
     .then((users) => console.log(users));
 }
 ```
 
-### More Tips
+After getting a song you might want to store into a **result element**
+
+Update `result` div with songs and when clicked `Get Lyrics` update with lyrics.
+
+```javascript
+const showData = (data) => {
+  result.innerHTML = `
+    <ul class="songs">
+      ${data.data
+        .map(
+          song => `<li>
+      <span><strong>${song.artist.name}</strong> - ${song.title}</span>
+      <button class="btn" data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</button>
+    </li>`
+        )
+        .join('')}
+    </ul>
+  `;
+```
+
+### Tips
 
 - Display UI with song/artist input
 - Fetch songs/artists and put in DOM
 - Add get lyrics functionality and display in DOM
-
-### Even More Tips
-
-Update `result` div with songs and when clicked `Get Lyrics` update with lyrics.
 
 ### Be careful
 
@@ -100,6 +117,6 @@ Update `result` div with songs and when clicked `Get Lyrics` update with lyrics.
 
 ### Extra
 
-- Add pagination using `prev` and `next` features from API. But you might get 'cors' issues.
+- Add pagination using `prev` and `next` features from API. But you might get **CORS** issues.
 
 > Want to give feedback? Did more than asked? Please slack your instructor.
