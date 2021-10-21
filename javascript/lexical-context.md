@@ -232,4 +232,5 @@ console.log(window.bar); // Created in foo without declaration
 
 # let and const
 
+let and const behave a little different than var. 
 Check out the “[var vs let vs const](https://learn.tylermcginnis.com/courses/modern-javascript/lectures/3167412)” lesson in the “Modern JavaScript” course.
