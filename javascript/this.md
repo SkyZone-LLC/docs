@@ -1,3 +1,5 @@
+> Source: Tyler McGinnis
+
 Before diving into the specifics of the `this` keyword in JavaScript, it’s important to take a step back and first look at why the `this` keyword exists in the first place. The `this` keyword allows you to reuse functions with different contexts. Said differently, **the “this” keyword allows you to decide which object should be focal when invoking a function or a method.** Everything we talk about after this will build upon that idea. We want to be able to reuse functions or methods in different contexts or with different objects.
 
 The first thing we’ll look at is how to tell what the `this` keyword is referencing. The first and most important question you need to ask yourself when you’re trying to answer this question is **“Where is this function being invoked?**”. The **only** way you can tell what the `this` keyword is referencing is by looking at where the function using the `this` keyword was invoked.

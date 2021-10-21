@@ -28,7 +28,7 @@ It’s not until the `Execution` phase where the JavaScript engine starts runnin
 
 We can see this flow from `Creation` phase to `Execution` phase in the GIF below.
 
-![creation to execution phase of global execution context](./images/4.gif)
+![creation to execution phase of global execution context](./images/global-execution-context-gif.gif)
 
 During the `Creation` phase `window` and `this` are created, variable declarations (`name` and `handle`) are assigned a default value of `undefined`, and any function declarations (`getUser`) are placed entirely into memory. Then once we enter the `Execution` phase, the JavaScript engine starts executing the code line by line and assigns the real values to the variables already living in memory.
 
@@ -89,7 +89,7 @@ Now the main question we need to answer is what’s the difference between the G
 
 Which of those steps **doesn’t** make sense when we’re talking about a Function Execution Context? It’s step #1. We should only ever have one global object that’s created during the `Creation` phase of the Global Execution Context, not every time a function is invoked and the JavaScript engine creates a Function Execution Context. Instead of creating a global object, one thing a Function Execution Context needs to worry about that the Global Execution Context doesn’t are arguments. With that in mind, we can adapt our list from earlier. Whenever a **Function** Execution Context is created, the JavaScript engine will
 
-> 1.  Create an **arguments** object.
+> 1.  Create an **arguments** object. // Not variables
 > 2.  Create an object called this.
 > 3.  Set up memory space for variables and functions.
 > 4.  Assign variable declarations a default value of “undefined” while placing any function declarations in memory.
@@ -98,7 +98,7 @@ To see this in action, let’s go back to the code we had earlier, but this time
 
 > [Visualize the code yourself](https://tylermcginnis.com/javascript-visualizer/?code=var%20name%20%3D%20%27Tyler%27%0Avar%20handle%20%3D%20%27%40tylermcginnis%27%0A%0Afunction%20getUser%20%28%29%20%7B%0A%20%20return%20%7B%0A%20%20%20%20name%3A%20name%2C%0A%20%20%20%20handle%3A%20handle%0A%20%20%7D%0A%7D%0A%0AgetUser%28%29)
 
-![getUser Execution Context Stepped](./images/5.gif)
+![getUser Execution Context Stepped](./images/function-execution-context-gif.gif)
 
 Just as we talked about, when we invoke `getUser` a new Execution Context is created. During the `Creation` phase of `getUsers` Execution Context, the JavaScript engine creates a `this` object as well as an `arguments` object. Because `getUser` doesn’t have any variables, the JavaScript engine doesn’t need to set up any memory space or “hoist” any variable declarations.
 
@@ -106,7 +106,7 @@ You may have also noticed that when the `getUser` function is finished executing
 
 > [Visualize the code yourself](https://tylermcginnis.com/javascript-visualizer/?code=function%20a%20%28%29%20%7B%0A%20%20console.log%28%27In%20fn%20a%27%29%0A%20%20%0A%20%20function%20b%20%28%29%20%7B%0A%20%20%20%20console.log%28%27In%20fn%20b%27%29%0A%20%20%20%20%0A%20%20%20%20function%20c%20%28%29%20%7B%0A%20%20%20%20%20%20console.log%28%27In%20fn%20c%27%29%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20c%28%29%0A%20%20%7D%0A%0A%20%20b%28%29%0A%7D%0A%0Aa%28%29)
 
-![Nested Execution Stack](./images/6.gif)
+![Nested Execution Stack](./images/javascript-execution-stack.gif)
 
 ---
 
@@ -114,7 +114,7 @@ At this point, we’ve seen how function invocations create their own Execution 
 
 > [Visualize the code yourself](https://tylermcginnis.com/javascript-visualizer/?code=var%20name%20%3D%20%27Tyler%27%0Avar%20handle%20%3D%20%27%40tylermcginnis%27%0A%0Afunction%20getURL%20%28handle%29%20%7B%0A%20%20var%20twitterURL%20%3D%20%27https%3A%2F%2Ftwitter.com%2F%27%0A%0A%20%20return%20twitterURL%20%2B%20handle%0A%7D%0A%0AgetURL%28handle%29)
 
-![Local Variables Execution Stack](./images/7.gif)
+![Local Variables Execution Stack](./images/local-variables.gif)
 
 There are few important details to notice here. First is that any argument you pass in will be added as a local variable in that function’s Execution Context. In the example `handle` exists both as a variable in the `Global` Execution Context (since that’s where it was defined) as well as the `getURL` Execution Context because we passed it in as an argument. Next is that variables declared inside of a function live inside that function’s Execution Context. So when we created `twitterURL`, it lived inside of the `getURL` Execution Context since that’s where it was defined, **not** the `Global` Execution Context. That may seem obvious, but it’s fundamental to our next topic, Scopes.
 
@@ -138,7 +138,7 @@ Let’s check it out in JavaScript Visualizer.
 
 > [Visualize the code yourself](https://tylermcginnis.com/javascript-visualizer/?code=function%20foo%20%28%29%20%7B%0A%20%20var%20bar%20%3D%20%27Declared%20in%20foo%27%0A%7D%0A%0Afoo%28%29%0A%0Aconsole.log%28bar%29)
 
-![Local Variables Execution Context](./images/8.gif)
+![Local Variables Execution Context](./images/scope.gif)
 
 When `foo` is invoked we create a new Execution Context on the Execution Stack. The `Creation` phase creates `this`, `arguments`, and sets `bar` to `undefined`. Then the `Execution` phase happens and assigns the string `Declared in foo` to `bar`. After that the `Execution` phase ends and the `foo` Execution Context is popped off the stack. Once `foo` is removed from the Execution Stack, we try to log `bar` to the console. At that moment, according to JavaScript Visualizer, it’s as if `bar` never even existed so we get `undefined`. What this shows us is that variables created inside of a function are locally scoped. That means (for the most part, we’ll see an exception later) they can’t be accessed once the function’s Execution Context has been popped off the Execution Stack.
 
@@ -168,7 +168,7 @@ Again, let’s take a look at JavaScript Visualizer.
 
 > [Visualize the code yourself](https://tylermcginnis.com/javascript-visualizer?code=function%20first%20%28%29%20%7B%0A%20%20var%20name%20%3D%20%27Jordyn%27%0A%0A%20%20console.log%28name%29%0A%7D%0A%0Afunction%20second%20%28%29%20%7B%0A%20%20var%20name%20%3D%20%27Jake%27%0A%0A%20%20console.log%28name%29%0A%7D%0A%0Aconsole.log%28name%29%0Avar%20name%20%3D%20%27Tyler%27%0Afirst%28%29%0Asecond%28%29%0Aconsole.log%28name%29)
 
-![Which phase happens when?](./images/9.gif)
+![Which phase happens when?](./images/unique-scopes.gif)
 
 We get `undefined`, `Jordyn`, `Jake`, then `Tyler`. What this shows us is that you can think of each new Execution Context as having its own unique variable environment. Even though there are other Execution Contexts that contain the variable `name`, the JavaScript engine will first look to the current Execution Context for that variable.
 
@@ -186,7 +186,7 @@ logName();
 
 > [Visualize the code yourself](https://tylermcginnis.com/javascript-visualizer/?code=var%20name%20%3D%20%27Tyler%27%0A%0Afunction%20logName%20%28%29%20%7B%0A%20%20console.log%28name%29%0A%7D%0A%0AlogName%28%29)
 
-![Stepped through which phase?](./images/10.gif)
+![Stepped through which phase?](./images/parent-lookup.gif)
 
 Your intuition might be that it’s going to log undefined since the logName Execution Context doesn’t have a name variable in its scope. That’s fair, but it’s wrong. What happens is if the JavaScript engine can’t find a variable local to the function’s Execution Context, it’ll look to nearest parent Execution Context for that variable. This lookup chain will continue all the way until the engine reaches the Global Execution Context. In that case, if the Global Execution Context doesn’t have the variable, it’ll throw a Reference Error.
 
@@ -198,7 +198,7 @@ Earlier we learned that variables created inside of a function are locally scope
 
 [Visualize the code yourself](https://tylermcginnis.com/javascript-visualizer/?code=var%20count%20%3D%200%0A%0Afunction%20makeAdder%28x%29%20%7B%0A%20%20return%20function%20inner%20%28y%29%20%7B%0A%20%20%20%20return%20x%20%2B%20y%3B%0A%20%20%7D%3B%0A%7D%0A%0Avar%20add5%20%3D%20makeAdder%285%29%3B%0Acount%20%2B%3D%20add5%282%29)
 
-![Closure Scope](./images/11.gif)
+![Closure Scope](./images/closure-scope.gif)
 
 Notice that after the `makeAdder` Execution Context has been popped off the Execution Stack, JavaScript Visualizer creates what’s called a `Closure Scope`. Inside of that `Closure Scope` is the same variable environment that existed in the `makeAdder` Execution Context. The reason this happened is because we have a function nested inside of another function. In our example, the `inner` function is nested inside of the `makeAdder` function, so `inner` creates a `Closure` over the `makeAdder` variable environment. Even after the `makeAdder` Execution Environment has been popped off the Execution Stack, because that `Closure Scope` was created, `inner` has access to the `x` variable (via the Scope Chain).
 
