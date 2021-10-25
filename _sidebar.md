@@ -7,10 +7,10 @@
 - [JavaScript Topics](/javascript/README.md)
   - [this](/javascript/this.md)
   - [lexical-context](/javascript/lexical-context.md)
-  - [prototypes in javascript](javascript/prototype.md)
-  - [eslint](javascript/eslint.md)
   - [composition](javascript/composition.md)
-  - [JS Modules](javascript/modules.md)
+  <!-- - [prototypes in javascript](javascript/prototype.md) -->
+  <!-- - [eslint](javascript/eslint.md) -->
+  <!-- - [JS Modules](javascript/modules.md) -->
 <!-- - [Workshops](/workshops/README.md)
   - [DOM](/workshops/DOM/README.md)
     - [bmi](/workshops/DOM/bmi.md)
