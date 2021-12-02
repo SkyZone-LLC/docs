@@ -69,6 +69,13 @@
 
 8. Set up your Production Database. Create a database to host your production data:
 
+    **IMPORTANT START**
+    If you are using MongoDB Atlas (cloud) Database. Skip this step (8). And simply set you keys to heroku. Either using 9. step or from Heroku Dashboard.
+
+    [Heroku config varts](../_media/heroku_config_vars.png)
+
+    **IMPORTANT END**
+
     `heroku addons:create mongolab:sandbox`
 
 8. If you have .env variables. Push them to heroku as well:
